@@ -22,8 +22,7 @@ namespace Hospital
             {
                 var store = new DocumentStore
                 {
-                    Url = "https://lark.ravenhq.com/databases/AppHarbor_c18f9245-031f-4e74-9a0e-df70bbff4e47",
-                    ApiKey = "0cfba5fc-d526-4a64-af88-a442c5bf2234"
+                    ConnectionStringName = "RavenDbConnectionString"
                 }.Initialize();
 
                 store.DatabaseCommands.EnsureDatabaseExists(RavenDatabaseName);
