@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Duke.Owin.VkontakteMiddleware</id>
+    <version>1.0.0.1</version>
+    <title>Duke.Owin.VkontakteMiddleware</title>
+    <authors>DukeNuken</authors>
+    <owners>DukeNuken</owners>
+    <projectUrl>https://github.com/DukeNuken/Duke.Owin.VkontakteMiddleware</projectUrl>
+    <iconUrl>http://freemusiclib.com/content/images/vk.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Owin Middleware module for site vk.com (vkontakte). Working fine with mvc 5.</description>
+    <summary>Owin Middleware module for site vk.com (vkontakte). Working fine with mvc 5.</summary>
+    <releaseNotes />
+    <copyright>Copyright ©  2013</copyright>
+    <language />
+    <tags>Owin vk.com vknotakte Middleware</tags>
+  </metadata>
+</package>

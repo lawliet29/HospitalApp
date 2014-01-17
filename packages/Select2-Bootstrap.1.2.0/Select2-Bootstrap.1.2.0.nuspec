@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Select2-Bootstrap</id>
+    <version>1.2.0</version>
+    <title>Select2-Bootstrap</title>
+    <authors>Tom Terrace</authors>
+    <owners>Tom Terrace</owners>
+    <projectUrl>https://github.com/t0m/select2-bootstrap-css</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Bare bones stylesheet for making select2 fit in with bootstrap a bit better</description>
+    <summary>https://github.com/t0m/select2-bootstrap-css packaged for NuGet</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <dependencies>
+      <dependency id="Twitter.Bootstrap" version="2.3.2" />
+      <dependency id="Select2.js" version="3.4.1.1" />
+    </dependencies>
+  </metadata>
+</package>

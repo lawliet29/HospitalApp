@@ -1,0 +1,127 @@
+﻿@model IEnumerable<Hospital.Models.DatabaseEntities.Registration>
+@using Hospital.Util;
+@using Hospital.Util.Helpers;
+
+@{
+    if (ViewBag.Title == null) { 
+        ViewBag.Title = "Manage registrations";
+    }
+}
+
+<h2>
+    @ViewBag.Title
+</h2>
+
+<table class="table table-striped table-hover table-curved">
+    <thead>
+        <tr>
+            <th>
+                Patient
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Submitted)
+            </th>
+            <th>
+                Doctor
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+
+            <th>Actions</th>
+        </tr>
+
+
+
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var css = "";
+            if (item.Status == Hospital.Models.Enums.RegistrationStatus.RejectedByDoctor) {
+                css = "warning";
+            }
+            if (item.Status == Hospital.Models.Enums.RegistrationStatus.SentToRegistrator) {
+                css = "success";
+            }
+
+
+        <tr class="@css">
+            <td>
+                @Html.ActionLink(item.Patient.Name, "View", "Patient", new { id = item.Patient.Id }, null)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Submitted)
+            </td>
+            <td>
+                @if (item.Doctor == null)
+                    {
+                    @:Not assigned
+                    }
+                    else
+                    {
+                    @Html.ActionLink(item.Doctor.Name, "View", "Doctors", new { id = item.Doctor.Id }, null);
+                    }
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td>
+                @item.Status.ToString().SplitCamelCase()
+            </td>
+            <td>
+                @Html.ActionLink("Details", "View", "Registration", new { id = item.IntId }, null)
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>
+
+@section scripts {
+    <script type="text/javascript">
+        $(function () {
+
+            $.extend(true, $.fn.dataTable.defaults, {
+                "sDom": "<'row'<'col-8'f><'col-8'l>r>t<'row'<'col-md-4'i><'col-md-8'p>>",
+                "sPaginationType": "bootstrap",
+                "oLanguage": {
+                    "sLengthMenu": "Show _MENU_ Rows",
+                    "sSearch": ""
+                }
+            });
+
+            $("table").dataTable();
+
+            $(function () {
+                $('table').each(function () {
+                    var datatable = $(this);
+                    // SEARCH - Add the placeholder for Search and Turn this into in-line formcontrol
+                    var search_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] input');
+                    search_input.attr('placeholder', 'Search')
+                    search_input.addClass('form-control input-small')
+                    search_input.css('width', '250px')
+
+                    // SEARCH CLEAR - Use an Icon
+                    var clear_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] a');
+                    clear_input.html('<i class="icon-remove-circle icon-large"></i>')
+                    clear_input.css('margin-left', '5px')
+
+                    // LENGTH - Inline-Form control
+                    var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');
+                    length_sel.addClass('form-control input-small')
+                    length_sel.css('width', '75px')
+
+                    // LENGTH - Info adjust location
+                    var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_info]');
+                    length_sel.css('margin-top', '18px')
+                });
+            });
+        });
+    </script>
+}

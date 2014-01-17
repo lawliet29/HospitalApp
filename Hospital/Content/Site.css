@@ -1,0 +1,185 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.navbar-header .navbar-brand {
+    padding: 0;
+    padding-top:3px;
+}
+
+li.divider-vertical {
+    height: 50px;
+    margin: 0 9px;
+    border-left: 1px solid #F2F2F2;
+    border-right: 1px solid #FFF;
+}
+
+.navbar-fixed-top {
+    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-left: 30px;    
+}
+.right-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+}
+
+table.table thead .sorting,
+table.table thead .sorting_asc,
+table.table thead .sorting_desc,
+table.table thead .sorting_asc_disabled,
+table.table thead .sorting_desc_disabled {
+    cursor: pointer;
+    *cursor: hand;
+}
+ 
+table.table thead .sorting { background: url('DataTables-1.9.4/media/images/sort_both.png') no-repeat center right; }
+table.table thead .sorting_asc { background: url('DataTables-1.9.4/media/images/sort_asc.png') no-repeat center right; }
+table.table thead .sorting_desc { background: url('DataTables-1.9.4/media/images/sort_desc.png') no-repeat center right; }
+ 
+table.table thead .sorting_asc_disabled { background: url('DataTables-1.9.4/media/images/sort_asc_disabled.png') no-repeat center right; }
+table.table thead .sorting_desc_disabled { background: url('DataTables-1.9.4/media/images/sort_desc_disabled.png') no-repeat center right; }
+
+div.dataTables_length label {
+    padding-left: 14px;
+    width: 460px;
+    float: left;
+    text-align: left;
+}
+ 
+div.dataTables_length select {
+    display: inline;
+}
+ 
+div.dataTables_filter label {
+    float: right;
+    width: 264px;
+}
+ 
+div.dataTables_info {
+    display: inline-block;
+    padding-top: 8px;
+}
+ 
+div.dataTables_paginate {
+    float: right;
+    margin: 0;
+}
+ 
+table {
+    margin: 1em 0;
+    clear: both;
+}
+
+.table-curved {
+    border-collapse: separate;
+    border: solid #ccc 1px;
+    border-radius: 6px;
+    border-left:0px;
+}
+.table-curved td, .table-curved th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.table-curved th {
+    border-top: none;
+}
+.table-curved th:first-child {
+    border-radius: 6px 0 0 0;
+}
+.table-curved th:last-child {
+    border-radius: 0 6px 0 0;
+}
+.table-curved th:only-child{
+    border-radius: 6px 6px 0 0;
+}
+.table-curved tr:last-child td:first-child {
+    border-radius: 0 0 0 6px;
+}
+.table-curved tr:last-child td:last-child {
+    border-radius: 0 0 6px 0;
+}
+
+ul.multiselect-container {
+    width: 100%;
+}
+
+h2 div.label {
+    font-size: 40%;
+}
+
+div.select2-container.input-default {
+    width: 280px;
+}
+
+div.select2-container.input-default a{
+    height: 34px;
+    padding: 4px 12px;
+    border: 1px solid #cccccc;
+    background-color: #FFF;
+    background-image: none;
+}
+
+.select2-container .select2-choice span.select2-arrow {
+    background-color: #FFF;
+    background-image: none;
+    border-left: none;
+}
+
+div.select2-search input {
+    .form-control();
+}
+
+.bootstrap-datetimepicker-widget li.picker-switch {
+    height: 20px;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu ul {
+    padding: 0;
+}

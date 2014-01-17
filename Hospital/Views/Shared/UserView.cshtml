@@ -1,0 +1,87 @@
+﻿@model Hospital.Models.UserViewModel
+@using Hospital.Util
+@using Hospital.Util.Helpers
+
+@{
+    ViewBag.Title = Model.Name;
+    string formAction = "Error";
+    switch (Model.Role)
+    {
+        case Hospital.Models.Enums.Role.Doctor: formAction = "Doctors"; break;
+        case Hospital.Models.Enums.Role.Patient: formAction = "Patient"; break;
+    }
+}
+
+@using (Html.BeginForm("Edit", formAction, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <h3>
+        @Model.Name
+
+        @if (Model.CanBeEdited && !Model.Editable)
+        {
+            <a href="@Url.Action("Edit", formAction, new { id = Model.Id })" class="btn btn-default pull-right">
+                <i class="fa fa-edit"></i>
+                Edit profile info
+            </a>
+        }
+    </h3>
+    <hr />
+    
+    @Html.ValidationSummary(true)
+    
+    @Html.HiddenFor(m => m.Id)
+    @Html.FormGroupFor(m => m.Email, false)
+    @Html.FormGroupFor(m => m.Name, Model.Editable, Model.Role == Hospital.Models.Enums.Role.Doctor ? "fa-user-md" : "fa-user")
+    if (Model.Role == Hospital.Models.Enums.Role.Patient) { 
+        @Html.FormGroupDatepickerFor(m => m.PatientInfo.BirthdayDate, Model.Editable)
+        @Html.FormGroupFor(m => m.PatientInfo.Address, Model.Editable, "fa-building-o")
+    }
+    else if (Model.Role == Hospital.Models.Enums.Role.Doctor)
+    {
+        if (Model.Editable)
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.DoctorInfo.Qualification, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @{
+                        var selectListItems = Enum.GetNames(typeof(Hospital.Models.Enums.DoctorType))
+                            .Select(type => new SelectListItem
+                            {
+                                Text = type.ToString().SplitCamelCase(),
+                                Value = type,
+                                Selected = Model.DoctorInfo == null ? false : Model.DoctorInfo.Types.Any(t => t.ToString() == type)
+                            });
+                            
+                    }
+                @Html.ListBoxFor(m => m.DoctorInfo.Types, selectListItems, new { @class="multiselect col-md-2", multiple="multiple" })
+                </div>
+            </div>
+    
+        }
+        else
+        {
+            @Html.FormGroupFor(m => m.DoctorInfo.Qualification, false)
+        }
+        
+        @Html.FormGroupFor(m => m.DoctorInfo.FreeNextTime, false)
+    }
+    
+    if (Model.Editable)
+    {
+        <div class="row">
+            <div class="col-md-offset-2 col-md-2">
+                <input type="submit" class="btn btn-primary btn-block" value="Save" />
+            </div>
+
+            <div class="col-md-2">
+                <a href="@Url.Action("View", formAction, new { id = Model.Id })" class="btn btn-danger btn-block">
+                    <i class="fa fa-times"></i>
+                    Cancel
+                </a>
+            </div>
+
+        </div>
+    }
+}
