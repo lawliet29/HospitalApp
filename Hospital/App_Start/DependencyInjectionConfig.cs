@@ -26,7 +26,6 @@ namespace Hospital
                     ApiKey = "0cfba5fc-d526-4a64-af88-a442c5bf2234"
                 }.Initialize();
 
-                store.DatabaseCommands.EnsureDatabaseExists(RavenDatabaseName);
 
                 return store;
             }).As<IDocumentStore>().SingleInstance();
