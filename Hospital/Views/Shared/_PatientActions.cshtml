@@ -1,0 +1,11 @@
+﻿@model int
+
+<li>
+    <a href="@Url.Action("List", "Registration")">
+        Registrations
+        @if (Model > 0)
+        {
+            <span class="badge">@Model</span>
+        }
+    </a>
+</li>

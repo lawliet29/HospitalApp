@@ -1,0 +1,174 @@
+﻿@model Hospital.Models.DatabaseEntities.Registration
+@using Hospital.Util
+@using Hospital.Util.Helpers
+
+@{
+    ViewBag.Title = "Registration form";
+    var isPatientCreate = Model.ViewMode == Hospital.Models.Enums.RegistrationMode.PatientCreate;
+    var registratorView = Model.ViewMode == Hospital.Models.Enums.RegistrationMode.RegistratorView;
+    var isViewMode = Model.ViewMode == Hospital.Models.Enums.RegistrationMode.DoctorView ||
+                     Model.ViewMode == Hospital.Models.Enums.RegistrationMode.RegistratorView ||
+                     Model.ViewMode == Hospital.Models.Enums.RegistrationMode.View;
+
+    var registratorEdit = Model.ViewMode == Hospital.Models.Enums.RegistrationMode.RegistratorEdit;
+    var doctorEdit = Model.ViewMode == Hospital.Models.Enums.RegistrationMode.DoctorEdit;
+
+    var formAction = isPatientCreate
+                        ? "New"
+                        : registratorEdit
+                            ? "Register"
+                            : "Approve";
+
+    var doctorView = Model.ViewMode == Hospital.Models.Enums.RegistrationMode.DoctorView && Model.Status == Hospital.Models.Enums.RegistrationStatus.SentToDoctor;
+    var printable = Model.ViewMode == Hospital.Models.Enums.RegistrationMode.View && Model.Status == Hospital.Models.Enums.RegistrationStatus.Assigned;
+}
+
+<h2>
+    Registration
+    <div class="label label-primary pull-right">@Model.Status.ToString().SplitCamelCase()</div>
+    <div class="clearfix"></div>
+</h2>
+<div class="clearfix"></div>
+
+
+
+
+@using (Html.BeginForm(formAction, "Registration", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Id)
+    @Html.HiddenFor(m => m.UserId)
+    @Html.FormGroupFor(m => m.Patient.Name, false)
+
+    if (Model.ViewMode == Hospital.Models.Enums.RegistrationMode.PatientCreate)
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.DesiredTypes, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.DesiredTypes,
+                    Enum.GetNames(typeof(Hospital.Models.Enums.DoctorType))
+                        .Select(type => new SelectListItem
+                        {
+                            Text = type.ToString().SplitCamelCase(),
+                            Value = type,
+                            Selected = Model.DesiredTypes == null ? false : Model.DesiredTypes.Any(t => t.ToString() == type)
+                        }
+                ), new { @class = "multiselect col-md-2", multiple = "multiple" })
+
+                <p class="help-block">Leave empty if not sure</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        @Html.FormGroupFor(m => m.DesiredTypesString, false)
+    }
+
+    @Html.FormGroupTextAreaFor(m => m.Symptoms,
+                                isEditable: isPatientCreate,
+                                description: isPatientCreate ? "Short description of what's bothering you" : "")
+
+    if (isPatientCreate) { 
+        @Html.FormGroupDatepickerFor(m => m.StartTime, true,
+                                    isPatientCreate ? "Registrator may require you to change the appointment date later" : "")
+    }
+    else
+    {
+        @Html.FormGroupDateTimePickerFor(m => m.StartTime, registratorEdit || doctorEdit)
+    }
+
+    if (ViewBag.Doctors != null)
+    {
+        var doctors = ViewBag.Doctors as IEnumerable<Hospital.Models.ApplicationUser>;
+        <div class="form-group">
+            <label class="col-md-2 control-label">
+                Assign to
+            </label>
+            <div class="col-md-10 controls">
+                @Html.DropDownListFor(m => m.DoctorId, doctors.Select(d =>
+                    new SelectListItem
+                    {
+                        Text = d.FullName,
+                        Value = d.Id
+                    }), new { @class = "select2 input-default" })
+
+            </div>
+        </div>
+        
+    }
+
+    if (Model.Doctor != null)
+    {
+        @Html.FormGroupFor(m => m.Doctor.Name, false);
+    }
+
+    if (printable)
+    {
+        <div class="row">
+            <div class="col-md-2">
+                <a id="print" href="#" class="btn btn-block btn-primary">
+                    Print
+                </a>
+            </div>
+        </div>
+    }
+
+    if (doctorView || registratorView)
+    {
+        <div class="row">
+            @if (doctorView) { 
+                <div class="col-md-2">
+                    <a href="@Url.Action("Approve", "Registration", new { id = Model.IntId })" class="btn btn-success btn-block" >
+                        Approve
+                    </a>
+                </div>
+            }
+            @if (registratorView)
+            {
+                <div class="col-md-2">
+                    <a class="btn btn-success btn-block" href="@Url.Action("Register", new { id = Model.IntId })">
+                        Register
+                    </a>
+                </div>
+            }
+            <div class="col-md-2">
+                <a href="@Url.Action("Reject", "Registration", new { id = Model.IntId })" class="btn btn-danger btn-block">
+                    Reject
+                </a>
+            </div>
+        </div>
+    }
+
+    if (!isViewMode)
+    {
+        <div class="row">
+            <div class="col-md-offset-2 col-md-2">
+                <input type="submit" class="btn btn-primary btn-block" value="@(isPatientCreate ? "Submit" : "Update")" />
+
+            </div>
+            @if (!isPatientCreate)
+            {
+                <div class="col-md-2">
+                    <a href="@Url.Action("View", "Registration", new { id = Model.IntId })" class="btn btn-danger btn-block">
+                        Cancel
+                    </a>
+                </div>
+            }
+        </div>
+    }
+
+}
+
+
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            $(".select2").select2();
+            $("#print").click(function () {
+                window.print();
+            });
+        });
+
+
+    </script>
+}

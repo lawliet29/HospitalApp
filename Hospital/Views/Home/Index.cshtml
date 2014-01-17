@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>
+        <span><i class="fa fa-hospital-o"></i></span>
+        Hospital web app
+    </h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Patients</h2>
+        <p>
+            As a patient, you are able to opt for registration for any medical services.
+            Register on the website (or log in with your Google account), fill in medical services application form
+            and that's it! Our registrators will contact you as soon as they can, present you with the ticket
+            for reception and provide you with any additional instructions necessary.
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("New", "Registration")">Register for reception &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Doctors</h2>
+        <p>As a doctor, you are able to view dynamically-updated information about your appointments schedule.</p>
+        <p><a class="btn btn-default" href="@Url.Action("List", "Registration")">View appointments &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Registrators</h2>
+        <p>
+            As a registrator, you are able to process incoming patient reception requests, direct them to the appropriate
+            doctors, notify parties about reception involvement and control the process of handling patient care in the hospital.
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Manage", "Registration")">Manage registrations &raquo;</a></p>
+    </div>
+</div>

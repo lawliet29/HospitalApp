@@ -1,0 +1,122 @@
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Hospital.dll.config
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Hospital.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Hospital.pdb
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Antlr3.Runtime.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Google.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Web.Infrastructure.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Newtonsoft.Json.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Owin.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.Helpers.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.Mvc.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.Optimization.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.Razor.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.WebPages.Deployment.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.WebPages.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.WebPages.Razor.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\WebGrease.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.Helpers.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.Mvc.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.Optimization.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.Razor.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.WebPages.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.WebPages.Deployment.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\System.Web.WebPages.Razor.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Newtonsoft.Json.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Antlr3.Runtime.pdb
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Google.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\obj\Debug\Hospital.csprojResolveAssemblyReference.cache
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\obj\Debug\Hospital.dll
+c:\users\alex\documents\visual studio 2013\Projects\Hospital\Hospital\obj\Debug\Hospital.pdb
+c:\Users\Alex\Documents\Visual Studio 2013\Projects\Hospital\Hospital\bin\AspNet.Identity.RavenDB.dll
+c:\Users\Alex\Documents\Visual Studio 2013\Projects\Hospital\Hospital\bin\Autofac.dll
+c:\Users\Alex\Documents\Visual Studio 2013\Projects\Hospital\Hospital\bin\Autofac.Integration.Mvc.dll
+c:\Users\Alex\Documents\Visual Studio 2013\Projects\Hospital\Hospital\bin\Raven.Abstractions.dll
+c:\Users\Alex\Documents\Visual Studio 2013\Projects\Hospital\Hospital\bin\Raven.Client.Lightweight.dll
+c:\Users\Alex\Documents\Visual Studio 2013\Projects\Hospital\Hospital\bin\Autofac.xml
+c:\Users\Alex\Documents\Visual Studio 2013\Projects\Hospital\Hospital\bin\Autofac.Integration.Mvc.xml
+c:\Users\Alex\Documents\Visual Studio 2013\Projects\Hospital\Hospital\bin\Raven.Abstractions.pdb
+c:\Users\Alex\Documents\Visual Studio 2013\Projects\Hospital\Hospital\bin\Raven.Abstractions.xml
+c:\Users\Alex\Documents\Visual Studio 2013\Projects\Hospital\Hospital\bin\Raven.Client.Lightweight.pdb
+c:\Users\Alex\Documents\Visual Studio 2013\Projects\Hospital\Hospital\bin\Raven.Client.Lightweight.xml
+c:\Users\Alex\Documents\Visual Studio 2013\Projects\Hospital\Hospital\bin\Duke.Owin.VkontakteMiddleware.dll
+D:\Projects\Hospital\Hospital\bin\Hospital.dll.config
+D:\Projects\Hospital\Hospital\bin\Hospital.dll
+D:\Projects\Hospital\Hospital\bin\Hospital.pdb
+D:\Projects\Hospital\Hospital\bin\Antlr3.Runtime.dll
+D:\Projects\Hospital\Hospital\bin\AspNet.Identity.RavenDB.dll
+D:\Projects\Hospital\Hospital\bin\Autofac.dll
+D:\Projects\Hospital\Hospital\bin\Autofac.Integration.Mvc.dll
+D:\Projects\Hospital\Hospital\bin\Duke.Owin.VkontakteMiddleware.dll
+D:\Projects\Hospital\Hospital\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\Hospital\Hospital\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.dll
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.dll
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Google.dll
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Projects\Hospital\Hospital\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\Hospital\Hospital\bin\Newtonsoft.Json.dll
+D:\Projects\Hospital\Hospital\bin\Owin.dll
+D:\Projects\Hospital\Hospital\bin\Raven.Abstractions.dll
+D:\Projects\Hospital\Hospital\bin\Raven.Client.Lightweight.dll
+D:\Projects\Hospital\Hospital\bin\System.Web.Helpers.dll
+D:\Projects\Hospital\Hospital\bin\System.Web.Mvc.dll
+D:\Projects\Hospital\Hospital\bin\System.Web.Optimization.dll
+D:\Projects\Hospital\Hospital\bin\System.Web.Razor.dll
+D:\Projects\Hospital\Hospital\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\Hospital\Hospital\bin\System.Web.WebPages.dll
+D:\Projects\Hospital\Hospital\bin\System.Web.WebPages.Razor.dll
+D:\Projects\Hospital\Hospital\bin\WebGrease.dll
+D:\Projects\Hospital\Hospital\bin\Autofac.xml
+D:\Projects\Hospital\Hospital\bin\Autofac.Integration.Mvc.xml
+D:\Projects\Hospital\Hospital\bin\Raven.Abstractions.pdb
+D:\Projects\Hospital\Hospital\bin\Raven.Abstractions.xml
+D:\Projects\Hospital\Hospital\bin\Raven.Client.Lightweight.pdb
+D:\Projects\Hospital\Hospital\bin\Raven.Client.Lightweight.xml
+D:\Projects\Hospital\Hospital\bin\System.Web.Helpers.xml
+D:\Projects\Hospital\Hospital\bin\System.Web.Mvc.xml
+D:\Projects\Hospital\Hospital\bin\System.Web.Optimization.xml
+D:\Projects\Hospital\Hospital\bin\System.Web.Razor.xml
+D:\Projects\Hospital\Hospital\bin\System.Web.WebPages.xml
+D:\Projects\Hospital\Hospital\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\Hospital\Hospital\bin\System.Web.WebPages.Razor.xml
+D:\Projects\Hospital\Hospital\bin\Newtonsoft.Json.xml
+D:\Projects\Hospital\Hospital\bin\Antlr3.Runtime.pdb
+D:\Projects\Hospital\Hospital\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\Hospital\Hospital\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.xml
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.xml
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Google.xml
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Projects\Hospital\Hospital\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Projects\Hospital\Hospital\obj\Debug\Hospital.csprojResolveAssemblyReference.cache
+D:\Projects\Hospital\Hospital\obj\Debug\Hospital.dll
+D:\Projects\Hospital\Hospital\obj\Debug\Hospital.pdb

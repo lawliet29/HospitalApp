@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Hospital web app</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="@Url.Action("Index", "Home")" class="navbar-brand">
+                    <i class="fa fa-2x fa-hospital-o"></i>
+                    Hospital
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Profile", "Index", "Profile")</li>
+                    @if (User.Identity.IsAuthenticated) { 
+                        <li>@Html.ActionLink("Doctors", "Index", "Doctors")</li>
+                        <li>@Html.ActionLink("Patients", "Index", "Patient")</li>
+                        @Html.Action("UserActions", "Home", null)
+                    }
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            @Html.ActionLink("Contacts", "Contacts", "Home")
+            <p class="pull-right">&copy; @DateTime.Now.Year - Hospital web app</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script type="text/javascript">
+        $(function () {
+            $(".multiselect").multiselect({
+                enableCaseInsensitiveFiltering: true,
+                maxHeight: 300,
+                buttonWidth: 280
+            });
+
+            $(".datepicker").datepicker({
+                format: "dd.MM.yyyy"
+            });
+
+            $(".datetimepicker").datetimepicker({
+                format: "dd.MM.yyyy hh:mm",
+                pickTime: true,
+                pickDate: true,
+                pick12HourFormat: true
+            });
+        });
+    </script>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
